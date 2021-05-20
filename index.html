@@ -26,7 +26,9 @@
         command = substrings[0];
         value = substrings[1];
         
-        output.innerHTML = command + ' ' + value;
+        if (command = "print") {
+          output.innerHTML = value;
+        }
       }
     </script>
   </body>
