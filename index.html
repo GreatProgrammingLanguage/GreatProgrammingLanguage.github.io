@@ -15,13 +15,18 @@
     <br>
     <script>
       var output = document.getElementById('output');
+      var command = '';
+      var value = '';
       let str = '';
       let substrings = '';
       
       function runCode() {
         str = document.getElementById('code').value;
         substrings = str.split(':');
-        output.innerHTML = substrings[0] + ' ' + substrings[1];
+        command = substrings[0];
+        value = substrings[1];
+        
+        output.innerHTML = command + ' ' + value;
       }
     </script>
   </body>
