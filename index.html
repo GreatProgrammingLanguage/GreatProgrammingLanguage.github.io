@@ -4,18 +4,22 @@
   </head>
   <body>
     <h1>Hello World!</h1>
-    <textarea></textarea>
+    <textarea id="code"></textarea>
     <br>
     <br>
-    <button>Run</button>
+    <button onclick="runCode()">Run</button>
     <br>
     <br>
     <script>
-      let str = 'JavaScript String split()';
-      let substrings = str.split(' ');
+      let str = '';
+      let substrings = '';
       
-      document.write(substrings[0])
-      document.write(substrings[1])
+      function runCode() {
+        str = document.getElementById('code').value;
+        substrings = str.split(':');
+        document.write(substrings[0])
+        document.write(substrings[1])
+      }
     </script>
   </body>
 </html>
